@@ -16,18 +16,25 @@ import           Control.Monad.Trans.Class (lift)
 loop :: IO ()
 loop = flip evalStateT emptyState $
        runInputT defaultSettings $
-       initial >> forever update
+       initial >> update
   where
     initial =
-      outputStrLn "Welcome to Straightedge and Compass!"
+      outputStrLn initialMessage
     update =
       getInputLine "> " >>= \case
-        Nothing ->
+        Nothing -> do
+          outputStrLn "Exiting..."
           return ()
-        Just str ->
+        Just str -> do
           case MP.parse commandParser "" str of
             Left bundle ->
               outputStrLn $ MP.errorBundlePretty bundle
             Right command -> do
               msg <- lift $ hoist generalize $ issue command
               outputStrLn msg
+          update
+
+initialMessage :: String
+initialMessage =
+  "Welcome to Straightedge and Compass!\n" ++
+  "Use CTRL + D to exit."

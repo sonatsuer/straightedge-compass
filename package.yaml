@@ -24,6 +24,9 @@ dependencies:
 - constructible
 - linear
 - haskeline
+- megaparsec
+- transformers
+- mmorph
 
 executables:
   straightedge-compass-exe:

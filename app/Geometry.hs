@@ -1,5 +1,6 @@
 {-# LANGUAGE
     DeriveFunctor
+  , LambdaCase
 #-}
 
 module Geometry where
@@ -28,6 +29,7 @@ data Circle = Circle
   , _radiusSquared :: C.Construct
   } deriving Show
 
+-------------------------------------------------------------------------------
 -- Constructions
 lineThroughPoints :: Point -> Point -> Result Line
 lineThroughPoints p1@(V2 x1 y1) p2@(V2 x2 y2)
@@ -96,3 +98,16 @@ intersectionOfCircles (Circle c1@(V2 x1 y1) rsq1) (Circle c2@(V2 x2 y2) rsq2)
           else if disc == 0 then Unique p
                             else Distinct (p + (1/2) * sqrt disc *^ q)
                                           (p - (1/2) * sqrt disc *^ q)
+
+-------------------------------------------------------------------------------
+-- Predicates
+
+isOnLine :: Point -> Line -> Bool
+isOnLine (V2 x y) = \case
+  Vertical x0 ->
+    x == x0
+  NonVertical m c ->
+    y == m * x + c
+
+isOnCircle :: Point -> Circle -> Bool
+isOnCircle p (Circle c rsq) = qd p c == rsq

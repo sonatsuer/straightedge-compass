@@ -1,4 +1,6 @@
 module Main where
 
+import           Loop (loop)
+
 main :: IO ()
-main = putStrLn "Not yet implemented"
+main = loop

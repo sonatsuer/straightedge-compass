@@ -24,7 +24,7 @@ type CommandM = ExceptT String (State GlobalState)
 emptyState :: GlobalState
 emptyState = M.empty
 
-issue :: Command a -> CommandM String
+issue :: Command -> CommandM String
 issue = \case
   Construct construction ->
     show . snd <$> evalConstruction construction

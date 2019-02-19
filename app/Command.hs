@@ -1,5 +1,6 @@
 {-# LANGUAGE
     GADTs
+  , ExplicitForAll
 #-}
 
 module Command where
@@ -31,13 +32,13 @@ data Capture
   = Single String
   | Pair String String
 
-data Command a where
-  Construct :: Construction a -> Command a
-  Name :: Construction a -> Capture -> Command a
-  Discard :: Name -> Command a
-  Show :: Name -> Command a
+data Command where
+  Construct :: forall a . Construction a -> Command
+  Name :: forall a . Construction a -> Capture -> Command
+  Discard :: Name -> Command
+  Show :: Name -> Command
 
 type Parser = MP.Parsec Void String
 
-commandParser :: Parser (Command a)
+commandParser :: Parser Command
 commandParser = undefined

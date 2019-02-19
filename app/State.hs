@@ -14,7 +14,6 @@ type CommandM = State GlobalState
 emptyState :: GlobalState
 emptyState = mempty
 
-
 checkName
   :: Name
   -> CommandM String
@@ -29,14 +28,6 @@ checkName name action1 action2 =
 
 issue :: Command -> State GlobalState String
 issue = \case
-  Construct obj ->
-    return $ show obj
-
-  Assign obj name ->
-    checkName name
-      (modify (M.insert name obj) >> return "Object assigned.")
-      (return . ("Object already exists:\n" ++) . show)
-
   Discard name ->
     checkName name
       (return $ "No object with name " ++ name ++ " exists.")

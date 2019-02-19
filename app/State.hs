@@ -1,6 +1,7 @@
 {-# LANGUAGE
     LambdaCase
   , GADTs
+  , RankNTypes
 #-}
 
 module State where
@@ -12,13 +13,10 @@ import           Command
 import           Geometry
 import qualified Data.Map.Strict as M
 
-data Object
-  = ObjPoint Point
-  | ObjLine Line
-  | ObjCircle Circle
-  deriving Show
+data MapObject where
+  MapObject :: forall a . RawObject a -> MapObject
 
-type GlobalState = M.Map String Object
+type GlobalState = M.Map String MapObject
 type CommandM = ExceptT String (State GlobalState)
 
 emptyState :: GlobalState
@@ -28,23 +26,28 @@ issue :: Command -> CommandM String
 issue = \case
   Construct construction ->
     show . snd <$> evalConstruction construction
-  Name construction capture -> do
+  NameResult construction capture -> do
     result <- evalConstruction construction
     case (capture, result) of
       (_, _) ->
         undefined
+  NameObject obj name ->
+    undefined
   Discard name ->
     undefined
   Show name ->
     undefined
 
 evalConstruction :: Construction a -> CommandM (a, String)
-evalConstruction = \case
-  LineLineIntersection inp1 inp2 -> do
-    l1 <- evalAsLine inp1
-    l2 <- evalAsLine inp2
-    let cons = intersectionOfLines l1 l2
-    return (intersectionOfLines l1 l2, "Constructed:\n" ++ show cons)
+evalConstruction = undefined
 
-evalAsLine :: Input Line -> CommandM Line
-evalAsLine = undefined
+inputToMapObject :: Input a -> CommandM MapObject
+inputToMapObject = \case
+  Raw rawObj ->
+    return $ MapObject rawObj
+  Reference name ->
+    (lift $ gets $ M.lookup name) >>= \case
+      Nothing ->
+        throwE $ "Object with name " ++ name ++ "does not exist"
+      Just mapObj ->
+        return mapObj

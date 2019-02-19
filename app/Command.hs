@@ -12,9 +12,14 @@ import           Geometry
 
 type Name = String
 
+data RawObject a where
+  RawPoint :: Point -> RawObject Point
+  RawLine :: Line -> RawObject Line
+  RawCircle :: Circle -> RawObject Circle
+
 data Input a
   = Reference Name
-  | Raw a
+  | Raw (RawObject a)
 
 data Construction a where
   LineLineIntersection
@@ -34,7 +39,8 @@ data Capture
 
 data Command where
   Construct :: forall a . Construction a -> Command
-  Name :: forall a . Construction a -> Capture -> Command
+  NameResult :: forall a . Construction a -> Capture -> Command
+  NameObject :: forall a . RawObject a -> Name -> Command
   Discard :: Name -> Command
   Show :: Name -> Command
 

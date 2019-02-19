@@ -76,7 +76,7 @@ asPoint inp = do
   case rawObj of
     RawPoint p ->
       return p
-    RawLine l ->
+    RawLine _ ->
       throwE $ "Expecting a point but got a line."
     RawCircle _ ->
       throwE $ "Expecting a point but got a circle."

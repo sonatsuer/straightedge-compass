@@ -5,11 +5,10 @@
 module Loop where
 
 import           System.Console.Haskeline
-import           Control.Monad (forever)
 import           Control.Monad.Morph (generalize, hoist)
 import qualified Text.Megaparsec as MP
 import           Command (commandParser)
-import           State (emptyState, issue, GlobalState(..))
+import           State (emptyState, issue)
 import           Control.Monad.Trans.State.Strict
 import           Control.Monad.Trans.Except
 import           Control.Monad.Trans.Class (lift)

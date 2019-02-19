@@ -8,7 +8,6 @@ module Command where
 
 import           Data.Void (Void)
 import qualified Text.Megaparsec as MP
-import qualified Text.Megaparsec.Char as MP
 import           Geometry
 
 type Name = String

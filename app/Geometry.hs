@@ -65,16 +65,16 @@ intersectionOfLines l1 l2 = case (l1, l2) of
 intersectionOfLineAndCircle :: Line -> Circle -> Result Point
 intersectionOfLineAndCircle l (Circle (V2 a b) rsq) = case l of
   Vertical c1 ->
-    let disc = 4 * (rsq - (c1 - a) ^ 2)
+    let disc = 4 * (rsq - (c1 - a) * (c1 - a))
      in if disc < 0 then None
         else if disc == 0 then Unique (V2 c1 b)
                           else Distinct (V2 c1 (b + (1/2) * sqrt disc))
                                         (V2 c1 (b - (1/2) * sqrt disc))
   NonVertical m1 c1 ->
-    let quadA = m1 ^ 2 + 1
+    let quadA = m1 * m1 + 1
         quadB = m1 * c1 - m1 * b - a
-        quadC = b ^ 2 + a ^ 2 - rsq - 2 * c1 * b + c1 ^ 2
-        disc = quadB ^ 2 - 4 * quadA * quadC
+        quadC = b * b + a * a - rsq - 2 * c1 * b + c1 * c1
+        disc = quadB * quadB - 4 * quadA * quadC
      in if disc < 0 then None
         else if disc == 0 then let x = -quadB / (2 * quadA)
                                 in Unique (V2 x (m1 * x + c1))
@@ -91,7 +91,7 @@ intersectionOfCircles (Circle c1@(V2 x1 y1) rsq1) (Circle c2@(V2 x2 y2) rsq2)
     = None
   | otherwise
     = let distsq = qd c1 c2
-          disc = 2 * (rsq1 + rsq2) / distsq - (rsq1 - rsq2)^2 / distsq^2 - 1
+          disc = 2 * (rsq1 + rsq2) / distsq - (rsq1 - rsq2) * (rsq1 - rsq2) / (distsq * distsq) - 1
           p = (1/2) *^ (c1 + c2) + ((rsq1 - rsq2) / (2 * distsq)) *^ (c2 - c1)
           q = V2 (y2 - y1) (x1 - x2)
        in if disc < 0 then None

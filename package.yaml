@@ -27,6 +27,7 @@ dependencies:
 - megaparsec
 - transformers
 - mmorph
+- containers
 
 executables:
   straightedge-compass-exe:

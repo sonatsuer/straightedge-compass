@@ -28,7 +28,7 @@ dependencies:
 - transformers
 - mmorph
 - containers
-- dependent-map
+- mtl
 
 executables:
   straightedge-compass-exe:

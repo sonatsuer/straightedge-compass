@@ -8,10 +8,9 @@ import           System.Console.Haskeline
 import           Control.Monad.Morph (generalize, hoist)
 import qualified Text.Megaparsec as MP
 import           Command (commandParser)
-import           State (emptyState, issue)
-import           Control.Monad.Trans.State.Strict
-import           Control.Monad.Trans.Except
-import           Control.Monad.Trans.Class (lift)
+import           State (emptyState, issue, _runCommandM)
+import           Control.Monad.State.Strict
+import           Control.Monad.Except
 
 loop :: IO ()
 loop = flip evalStateT emptyState $
@@ -30,7 +29,7 @@ loop = flip evalStateT emptyState $
             Left bundle ->
               outputStrLn $ MP.errorBundlePretty bundle
             Right command ->
-              (lift $ hoist generalize $ runExceptT $ issue command) >>= \case
+              (lift $ hoist generalize $ runExceptT $ _runCommandM $ issue command) >>= \case
                 Left err ->
                   outputStrLn $ "!!! " ++ err
                 Right msg ->

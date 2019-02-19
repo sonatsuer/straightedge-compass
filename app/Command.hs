@@ -1,6 +1,7 @@
 {-# LANGUAGE
     GADTs
   , ExplicitForAll
+  , LambdaCase
 #-}
 
 module Command where
@@ -16,6 +17,12 @@ data RawObject a where
   RawPoint :: Point -> RawObject Point
   RawLine :: Line -> RawObject Line
   RawCircle :: Circle -> RawObject Circle
+
+instance Show (RawObject a) where
+  show = \case
+    RawPoint point -> show point
+    RawLine line -> show line
+    RawCircle circle -> show circle
 
 data Input a
   = Reference Name

@@ -45,8 +45,8 @@ data Capture
   | Pair String String
 
 data Command where
-  Construct :: forall a . Construction a -> Command
-  NameResult :: forall a . Construction a -> Capture -> Command
+  Construct :: forall a . Construction (Result a) -> Command
+  NameResult :: forall a . Construction (Result a) -> Capture -> Command
   NameObject :: forall a . RawObject a -> Name -> Command
   Discard :: Name -> Command
   Show :: Name -> Command

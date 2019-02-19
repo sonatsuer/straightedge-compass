@@ -26,9 +26,9 @@ emptyState = M.empty
 issue :: Command -> CommandM String
 issue = \case
   Construct construction ->
-    show . snd <$> evalConstruction construction
+    show <$> evalConstruction construction
   NameResult construction capture -> do
-    (result, msg) <- evalConstruction construction
+    result <- evalConstruction construction
     assignResult capture (MapObject <$> result)
   NameObject obj name -> do
     assignObject name (MapObject obj)
@@ -37,8 +37,31 @@ issue = \case
   Show name ->
     display name
 
-evalConstruction :: Construction a -> CommandM (Result (RawObject a), String)
-evalConstruction = undefined
+
+evalConstruction
+  :: Construction (Result a)
+  -> CommandM (Result (RawObject a))
+evalConstruction = \case
+  LineLineIntersection inp1 inp2 -> do
+    l1 <- asLine inp1
+    l2 <- asLine inp2
+    return $ RawPoint <$> intersectionOfLines l1 l2
+  LineCircleIntersection inp1 inp2 -> do
+    l <- asLine inp1
+    c <- asCircle inp2
+    return $ RawPoint <$> intersectionOfLineAndCircle l c
+  CircleCircleIntersection inp1 inp2 -> do
+    c1 <- asCircle inp1
+    c2 <- asCircle inp2
+    return $ RawPoint <$> intersectionOfCircles c1 c2
+  LineThroughPoints inp1 inp2 -> do
+    p1 <- asPoint inp1
+    p2 <- asPoint inp2
+    return $ RawLine <$> lineThroughPoints p1 p2
+  CircleFromPoints inp1 inp2 -> do
+    p1 <- asPoint inp1
+    p2 <- asPoint inp2
+    return $ RawCircle <$> circleFromCenterAndPoint p1 p2
 
 inputToMapObject :: Input a -> CommandM MapObject
 inputToMapObject = \case

@@ -28,6 +28,7 @@ dependencies:
 - transformers
 - mmorph
 - containers
+- dependent-map
 
 executables:
   straightedge-compass-exe:
@@ -37,7 +38,6 @@ executables:
     - -threaded
     - -rtsopts
     - -with-rtsopts=-N
-    - -Wall
     dependencies:
     - straightedge-compass
 

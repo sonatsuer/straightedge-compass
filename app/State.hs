@@ -51,3 +51,38 @@ inputToMapObject = \case
         throwE $ "Object with name " ++ name ++ "does not exist"
       Just mapObj ->
         return mapObj
+
+asPoint :: Input a -> CommandM Point
+asPoint inp = do
+  MapObject rawObj <- inputToMapObject inp
+  case rawObj of
+    RawPoint p ->
+      return p
+    RawLine l ->
+      throwE $ "Expecting a point but got a line."
+    RawCircle _ ->
+      throwE $ "Expecting a point but got a circle."
+
+
+asLine :: Input a -> CommandM Line
+asLine inp = do
+  MapObject rawObj <- inputToMapObject inp
+  case rawObj of
+    RawPoint _ ->
+      throwE $ "Expecting a line but got a point."
+    RawLine l ->
+      return l
+    RawCircle _ ->
+      throwE $ "Expecting a line but got a circle."
+
+
+asCircle :: Input a -> CommandM Circle
+asCircle inp = do
+  MapObject rawObj <- inputToMapObject inp
+  case rawObj of
+    RawPoint _ ->
+      throwE $ "Expecting a circle but got a point."
+    RawLine _ ->
+      throwE $ "Expecting a circle but got a line."
+    RawCircle c ->
+      return c

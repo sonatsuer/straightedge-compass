@@ -4,13 +4,14 @@
 
 module Loop where
 
-import           System.Console.Haskeline
+import           Control.Monad.Except (runExceptT)
+import           Control.Monad.State.Strict (evalStateT, lift)
 import           Control.Monad.Morph (generalize, hoist)
-import qualified Text.Megaparsec as MP
+import           System.Console.Haskeline (runInputT, getInputLine, outputStrLn, defaultSettings)
+import           Text.Megaparsec (parse, errorBundlePretty)
+-------------------------------------------------------------------------------
 import           Command (commandParser)
 import           State (emptyState, issue, _runCommandM)
-import           Control.Monad.State.Strict
-import           Control.Monad.Except
 
 loop :: IO ()
 loop = flip evalStateT emptyState $
@@ -25,9 +26,9 @@ loop = flip evalStateT emptyState $
           outputStrLn "Exiting..."
           return ()
         Just str -> do
-          case MP.parse commandParser "" str of
+          case parse commandParser "" str of
             Left bundle ->
-              outputStrLn $ MP.errorBundlePretty bundle
+              outputStrLn $ errorBundlePretty bundle
             Right command ->
               (lift $ hoist generalize $ runExceptT $ _runCommandM $ issue command) >>= \case
                 Left err ->

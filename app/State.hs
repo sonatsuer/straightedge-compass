@@ -8,11 +8,12 @@
 module State where
 
 import           Control.Monad (when)
-import           Control.Monad.State.Strict
-import           Control.Monad.Except
+import           Control.Monad.Except (ExceptT, MonadError, throwError)
+import           Control.Monad.State.Strict (State, MonadState, gets, modify)
+import qualified Data.Map.Strict as M
+-------------------------------------------------------------------------------
 import           Command
 import           Geometry
-import qualified Data.Map.Strict as M
 
 data MapObject where
   MapObject :: forall a . RawObject a -> MapObject

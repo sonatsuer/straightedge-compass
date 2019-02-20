@@ -5,8 +5,8 @@
 
 module Geometry where
 
-import qualified Data.Real.Constructible as C
-import           Linear
+import           Data.Real.Constructible (Construct)
+import           Linear (V2(..), qd, (*^))
 
 data Result a
   = None
@@ -15,18 +15,18 @@ data Result a
   | Infinite
   deriving (Functor, Show)
 
-type Point = V2 C.Construct
+type Point = V2 Construct
 
 data Line
-  = Vertical { _xIntercept :: C.Construct }
+  = Vertical { _xIntercept :: Construct }
     -- Lines of the form x = c
-  | NonVertical { _slope :: C.Construct, _yIntercept :: C.Construct }
+  | NonVertical { _slope :: Construct, _yIntercept :: Construct }
     -- Lines of the form y = mx + c
   deriving Show
 
 data Circle = Circle
   { _center :: Point
-  , _radiusSquared :: C.Construct
+  , _radiusSquared :: Construct
   } deriving Show
 
 -------------------------------------------------------------------------------

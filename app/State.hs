@@ -1,7 +1,7 @@
 {-# LANGUAGE
     LambdaCase
   , GADTs
-  , RankNTypes
+  , ExplicitForAll
   , GeneralizedNewtypeDeriving
 #-}
 

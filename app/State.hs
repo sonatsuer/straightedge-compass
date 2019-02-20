@@ -36,9 +36,9 @@ issue = \case
   NameObject obj name -> do
     assignObject name (MapObject obj)
   Discard name ->
-    discard name
+    discardName name
   Show name ->
-    display name
+    displayName name
 
 
 evalConstruction
@@ -111,16 +111,16 @@ asCircle inp = do
 assign :: Name -> MapObject -> CommandM String
 assign name mapObj@(MapObject rawObj) = do
   modify (M.insert name mapObj)
-  return $ "Now the name " ++ name ++ "is assigned to\n" ++ show rawObj
+  return $ "Now the name " ++ name ++ " is assigned to\n" ++ show rawObj
 
 isFree :: Name -> CommandM Bool
-isFree name = gets $ M.member name
+isFree = fmap not . gets . M.member
 
 getMapObject :: Name -> CommandM MapObject
 getMapObject name =
   (gets $ M.lookup name) >>= \case
     Nothing ->
-      throwError $ "Object with name " ++ name ++ "does not exist"
+      throwError $ "Object with name " ++ name ++ " does not exist"
     Just mapObj ->
       return mapObj
 
@@ -159,14 +159,14 @@ assignObject :: Name -> MapObject -> CommandM String
 assignObject name obj =
   checkFree name >> assign name obj
 
-discard :: Name -> CommandM String
-discard name = do
+discardName :: Name -> CommandM String
+discardName name = do
   free <- isFree name
   when free (throwError $ name ++ " is not being used.")
   modify $ M.delete name
   return $ "Object named " ++ name ++ " is discarded."
 
-display :: Name -> CommandM String
-display name = do
+displayName :: Name -> CommandM String
+displayName name = do
   MapObject rawObj <- getMapObject name
   return $ show rawObj

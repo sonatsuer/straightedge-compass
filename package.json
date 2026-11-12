@@ -1,0 +1,44 @@
+{
+  "name": "straightedge-compass",
+  "version": "0.2.0",
+  "description": "Exact straightedge-and-compass construction proofs in the browser",
+  "license": "BSD-3-Clause",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=26"
+  },
+  "scripts": {
+    "build": "spago build && node build.mjs",
+    "dev": "spago build && node build.mjs --watch",
+    "release": "spago build && node build.mjs --release",
+    "test": "spago test",
+    "bench": "spago run -m Bench.Heptadecagon",
+    "check": "spago build && node src/cli.mjs check examples/*/*.sc",
+    "core": "spago build && node src/cli.mjs core examples/*/*.sc test/lean/*/*.sc && for f in examples/*/*.core.json test/lean/*/*.core.json; do node test/check-core.mjs \"$f\" || exit 1; done",
+    "lean": "rm -rf .lake/build/ir/examples .lake/build/lib/lean/examples .lake/build/ir/test .lake/build/lib/lean/test && lake build",
+    "format": "purs-tidy format-in-place \"src/**/*.purs\" \"test/**/*.purs\""
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2",
+    "purescript": "0.15.16",
+    "purs-tidy": "0.11.1",
+    "spago": "1.0.5"
+  },
+  "allowScripts": {
+    "purescript@0.15.16": true,
+    "esbuild@0.28.2": true,
+    "ssh2": false,
+    "cpu-features": false
+  },
+  "dependencies": {
+    "@codemirror/commands": "6.11.1",
+    "@codemirror/language": "6.13.1",
+    "@codemirror/state": "6.7.6",
+    "@codemirror/view": "6.43.15",
+    "@lezer/highlight": "1.2.5",
+    "@myriaddreamin/typst-ts-node-compiler": "0.7.0",
+    "@myriaddreamin/typst-ts-web-compiler": "0.7.0",
+    "@myriaddreamin/typst.ts": "0.7.0"
+  }
+}

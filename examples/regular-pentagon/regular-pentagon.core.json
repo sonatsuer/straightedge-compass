@@ -1,0 +1,2337 @@
+{
+ "format": "straightedge-compass-core",
+ "version": 1,
+ "title": "The regular pentagon by a Carlyle circle",
+ "givens": 2,
+ "tower": [
+  {
+   "num": "3",
+   "den": "1"
+  },
+  {
+   "num": [
+    "20",
+    "0"
+   ],
+   "den": "1"
+  },
+  {
+   "num": [
+    [
+     "160",
+     "0"
+    ],
+    [
+     "16",
+     "0"
+    ]
+   ],
+   "den": "1"
+  }
+ ],
+ "objects": [
+  {
+   "id": 0,
+   "name": "O",
+   "path": [],
+   "step": 0,
+   "named": "yes",
+   "kind": "point",
+   "def": {
+    "given": {
+     "x": "0",
+     "y": "0"
+    }
+   },
+   "coords": {
+    "x": {
+     "num": "0",
+     "den": "1"
+    },
+    "y": {
+     "num": "0",
+     "den": "1"
+    }
+   }
+  },
+  {
+   "id": 1,
+   "name": "P0",
+   "path": [],
+   "step": 1,
+   "named": "yes",
+   "kind": "point",
+   "def": {
+    "given": {
+     "x": "1",
+     "y": "0"
+    }
+   },
+   "coords": {
+    "x": {
+     "num": [
+      [
+       [
+        "1",
+        "0"
+       ],
+       "0"
+      ],
+      "0"
+     ],
+     "den": "1"
+    },
+    "y": {
+     "num": "0",
+     "den": "1"
+    }
+   }
+  },
+  {
+   "id": 2,
+   "name": "x",
+   "path": [],
+   "step": 2,
+   "named": "yes",
+   "kind": "line",
+   "def": {
+    "line": [
+     0,
+     1
+    ]
+   }
+  },
+  {
+   "id": 3,
+   "name": "u",
+   "path": [],
+   "step": 3,
+   "named": "yes",
+   "kind": "circle",
+   "def": {
+    "circle": [
+     0,
+     1
+    ]
+   }
+  },
+  {
+   "id": 4,
+   "name": "B",
+   "path": [],
+   "step": 4,
+   "named": "yes",
+   "kind": "point",
+   "def": {
+    "meet": [
+     2,
+     3
+    ],
+    "choice": {
+     "kind": "except",
+     "ref": {
+      "object": 1
+     }
+    },
+    "other": {
+     "x": {
+      "num": [
+       [
+        [
+         "1",
+         "0"
+        ],
+        "0"
+       ],
+       "0"
+      ],
+      "den": "1"
+     },
+     "y": {
+      "num": "0",
+      "den": "1"
+     }
+    }
+   },
+   "coords": {
+    "x": {
+     "num": [
+      [
+       [
+        "-1",
+        "0"
+       ],
+       "0"
+      ],
+      "0"
+     ],
+     "den": "1"
+    },
+    "y": {
+     "num": "0",
+     "den": "1"
+    }
+   }
+  },
+  {
+   "id": 5,
+   "name": "ca",
+   "path": [
+    "perpBisector(B, P0)"
+   ],
+   "step": 5,
+   "named": "no",
+   "kind": "circle",
+   "def": {
+    "circle": [
+     4,
+     1
+    ]
+   }
+  },
+  {
+   "id": 6,
+   "name": "cb",
+   "path": [
+    "perpBisector(B, P0)"
+   ],
+   "step": 5,
+   "named": "no",
+   "kind": "circle",
+   "def": {
+    "circle": [
+     1,
+     4
+    ]
+   }
+  },
+  {
+   "id": 7,
+   "name": "P",
+   "path": [
+    "perpBisector(B, P0)"
+   ],
+   "step": 5,
+   "named": "no",
+   "kind": "point",
+   "def": {
+    "meet": [
+     5,
+     6
+    ],
+    "choice": {
+     "kind": "lexFirst"
+    },
+    "other": {
+     "x": {
+      "num": "0",
+      "den": "1"
+     },
+     "y": {
+      "num": [
+       [
+        [
+         "0",
+         "1"
+        ],
+        "0"
+       ],
+       "0"
+      ],
+      "den": "1"
+     }
+    }
+   },
+   "coords": {
+    "x": {
+     "num": "0",
+     "den": "1"
+    },
+    "y": {
+     "num": [
+      [
+       [
+        "0",
+        "-1"
+       ],
+       "0"
+      ],
+      "0"
+     ],
+     "den": "1"
+    }
+   }
+  },
+  {
+   "id": 8,
+   "name": "Q",
+   "path": [
+    "perpBisector(B, P0)"
+   ],
+   "step": 5,
+   "named": "no",
+   "kind": "point",
+   "def": {
+    "meet": [
+     5,
+     6
+    ],
+    "choice": {
+     "kind": "lexSecond"
+    },
+    "other": {
+     "x": {
+      "num": "0",
+      "den": "1"
+     },
+     "y": {
+      "num": [
+       [
+        [
+         "0",
+         "-1"
+        ],
+        "0"
+       ],
+       "0"
+      ],
+      "den": "1"
+     }
+    }
+   },
+   "coords": {
+    "x": {
+     "num": "0",
+     "den": "1"
+    },
+    "y": {
+     "num": [
+      [
+       [
+        "0",
+        "1"
+       ],
+       "0"
+      ],
+      "0"
+     ],
+     "den": "1"
+    }
+   }
+  },
+  {
+   "id": 9,
+   "name": "y",
+   "path": [],
+   "step": 5,
+   "named": "yes",
+   "kind": "line",
+   "def": {
+    "line": [
+     7,
+     8
+    ]
+   }
+  },
+  {
+   "id": 10,
+   "name": "A",
+   "path": [],
+   "step": 6,
+   "named": "yes",
+   "kind": "point",
+   "def": {
+    "meet": [
+     9,
+     3
+    ],
+    "choice": {
+     "kind": "left",
+     "line": [
+      0,
+      1
+     ]
+    },
+    "other": {
+     "x": {
+      "num": "0",
+      "den": "1"
+     },
+     "y": {
+      "num": [
+       [
+        [
+         "-1",
+         "0"
+        ],
+        "0"
+       ],
+       "0"
+      ],
+      "den": "1"
+     }
+    }
+   },
+   "coords": {
+    "x": {
+     "num": "0",
+     "den": "1"
+    },
+    "y": {
+     "num": [
+      [
+       [
+        "1",
+        "0"
+       ],
+       "0"
+      ],
+      "0"
+     ],
+     "den": "1"
+    }
+   }
+  },
+  {
+   "id": 11,
+   "name": "ca",
+   "path": [
+    "midpoint(O, B)",
+    "perpBisector(A, B)"
+   ],
+   "step": 7,
+   "named": "no",
+   "kind": "circle",
+   "def": {
+    "circle": [
+     0,
+     4
+    ]
+   }
+  },
+  {
+   "id": 12,
+   "name": "cb",
+   "path": [
+    "midpoint(O, B)",
+    "perpBisector(A, B)"
+   ],
+   "step": 7,
+   "named": "no",
+   "kind": "circle",
+   "def": {
+    "circle": [
+     4,
+     0
+    ]
+   }
+  },
+  {
+   "id": 13,
+   "name": "P",
+   "path": [
+    "midpoint(O, B)",
+    "perpBisector(A, B)"
+   ],
+   "step": 7,
+   "named": "no",
+   "kind": "point",
+   "def": {
+    "meet": [
+     11,
+     12
+    ],
+    "choice": {
+     "kind": "lexFirst"
+    },
+    "other": {
+     "x": {
+      "num": [
+       [
+        [
+         "-1",
+         "0"
+        ],
+        "0"
+       ],
+       "0"
+      ],
+      "den": "2"
+     },
+     "y": {
+      "num": [
+       [
+        [
+         "0",
+         "1"
+        ],
+        "0"
+       ],
+       "0"
+      ],
+      "den": "2"
+     }
+    }
+   },
+   "coords": {
+    "x": {
+     "num": [
+      [
+       [
+        "-1",
+        "0"
+       ],
+       "0"
+      ],
+      "0"
+     ],
+     "den": "2"
+    },
+    "y": {
+     "num": [
+      [
+       [
+        "0",
+        "-1"
+       ],
+       "0"
+      ],
+      "0"
+     ],
+     "den": "2"
+    }
+   }
+  },
+  {
+   "id": 14,
+   "name": "Q",
+   "path": [
+    "midpoint(O, B)",
+    "perpBisector(A, B)"
+   ],
+   "step": 7,
+   "named": "no",
+   "kind": "point",
+   "def": {
+    "meet": [
+     11,
+     12
+    ],
+    "choice": {
+     "kind": "lexSecond"
+    },
+    "other": {
+     "x": {
+      "num": [
+       [
+        [
+         "-1",
+         "0"
+        ],
+        "0"
+       ],
+       "0"
+      ],
+      "den": "2"
+     },
+     "y": {
+      "num": [
+       [
+        [
+         "0",
+         "-1"
+        ],
+        "0"
+       ],
+       "0"
+      ],
+      "den": "2"
+     }
+    }
+   },
+   "coords": {
+    "x": {
+     "num": [
+      [
+       [
+        "-1",
+        "0"
+       ],
+       "0"
+      ],
+      "0"
+     ],
+     "den": "2"
+    },
+    "y": {
+     "num": [
+      [
+       [
+        "0",
+        "1"
+       ],
+       "0"
+      ],
+      "0"
+     ],
+     "den": "2"
+    }
+   }
+  },
+  {
+   "id": 15,
+   "name": "l",
+   "path": [
+    "midpoint(O, B)"
+   ],
+   "step": 7,
+   "named": "no",
+   "kind": "line",
+   "def": {
+    "line": [
+     13,
+     14
+    ]
+   }
+  },
+  {
+   "id": 16,
+   "name": "ab",
+   "path": [
+    "midpoint(O, B)"
+   ],
+   "step": 7,
+   "named": "no",
+   "kind": "line",
+   "def": {
+    "line": [
+     0,
+     4
+    ]
+   }
+  },
+  {
+   "id": 17,
+   "name": "M",
+   "path": [],
+   "step": 7,
+   "named": "yes",
+   "kind": "point",
+   "def": {
+    "meet": [
+     15,
+     16
+    ],
+    "choice": {
+     "kind": "unique"
+    },
+    "other": null
+   },
+   "coords": {
+    "x": {
+     "num": [
+      [
+       [
+        "-1",
+        "0"
+       ],
+       "0"
+      ],
+      "0"
+     ],
+     "den": "2"
+    },
+    "y": {
+     "num": "0",
+     "den": "1"
+    }
+   }
+  },
+  {
+   "id": 18,
+   "name": "c",
+   "path": [],
+   "step": 8,
+   "named": "yes",
+   "kind": "circle",
+   "def": {
+    "circle": [
+     17,
+     10
+    ]
+   }
+  },
+  {
+   "id": 19,
+   "name": "V",
+   "path": [],
+   "step": 9,
+   "named": "yes",
+   "kind": "point",
+   "def": {
+    "meet": [
+     2,
+     18
+    ],
+    "choice": {
+     "kind": "lexFirst"
+    },
+    "other": {
+     "x": {
+      "num": [
+       [
+        [
+         "-2",
+         "0"
+        ],
+        [
+         "1",
+         "0"
+        ]
+       ],
+       "0"
+      ],
+      "den": "4"
+     },
+     "y": {
+      "num": "0",
+      "den": "1"
+     }
+    }
+   },
+   "coords": {
+    "x": {
+     "num": [
+      [
+       [
+        "-2",
+        "0"
+       ],
+       [
+        "-1",
+        "0"
+       ]
+      ],
+      "0"
+     ],
+     "den": "4"
+    },
+    "y": {
+     "num": "0",
+     "den": "1"
+    }
+   }
+  },
+  {
+   "id": 20,
+   "name": "W",
+   "path": [],
+   "step": 9,
+   "named": "yes",
+   "kind": "point",
+   "def": {
+    "meet": [
+     2,
+     18
+    ],
+    "choice": {
+     "kind": "lexSecond"
+    },
+    "other": {
+     "x": {
+      "num": [
+       [
+        [
+         "-2",
+         "0"
+        ],
+        [
+         "-1",
+         "0"
+        ]
+       ],
+       "0"
+      ],
+      "den": "4"
+     },
+     "y": {
+      "num": "0",
+      "den": "1"
+     }
+    }
+   },
+   "coords": {
+    "x": {
+     "num": [
+      [
+       [
+        "-2",
+        "0"
+       ],
+       [
+        "1",
+        "0"
+       ]
+      ],
+      "0"
+     ],
+     "den": "4"
+    },
+    "y": {
+     "num": "0",
+     "den": "1"
+    }
+   }
+  },
+  {
+   "id": 21,
+   "name": "c1",
+   "path": [
+    "transfer(W, O, A)"
+   ],
+   "step": 10,
+   "named": "no",
+   "kind": "circle",
+   "def": {
+    "circle": [
+     20,
+     0
+    ]
+   }
+  },
+  {
+   "id": 22,
+   "name": "c2",
+   "path": [
+    "transfer(W, O, A)"
+   ],
+   "step": 10,
+   "named": "no",
+   "kind": "circle",
+   "def": {
+    "circle": [
+     0,
+     20
+    ]
+   }
+  },
+  {
+   "id": 23,
+   "name": "D",
+   "path": [
+    "transfer(W, O, A)"
+   ],
+   "step": 10,
+   "named": "no",
+   "kind": "point",
+   "def": {
+    "meet": [
+     21,
+     22
+    ],
+    "choice": {
+     "kind": "left",
+     "line": [
+      20,
+      0
+     ]
+    },
+    "other": {
+     "x": {
+      "num": [
+       [
+        [
+         "-2",
+         "0"
+        ],
+        [
+         "1",
+         "0"
+        ]
+       ],
+       "0"
+      ],
+      "den": "8"
+     },
+     "y": {
+      "num": [
+       [
+        [
+         "0",
+         "-2"
+        ],
+        [
+         "0",
+         "1"
+        ]
+       ],
+       "0"
+      ],
+      "den": "8"
+     }
+    }
+   },
+   "coords": {
+    "x": {
+     "num": [
+      [
+       [
+        "-2",
+        "0"
+       ],
+       [
+        "1",
+        "0"
+       ]
+      ],
+      "0"
+     ],
+     "den": "8"
+    },
+    "y": {
+     "num": [
+      [
+       [
+        "0",
+        "2"
+       ],
+       [
+        "0",
+        "-1"
+       ]
+      ],
+      "0"
+     ],
+     "den": "8"
+    }
+   }
+  },
+  {
+   "id": 24,
+   "name": "da",
+   "path": [
+    "transfer(W, O, A)"
+   ],
+   "step": 10,
+   "named": "no",
+   "kind": "line",
+   "def": {
+    "line": [
+     23,
+     0
+    ]
+   }
+  },
+  {
+   "id": 25,
+   "name": "cab",
+   "path": [
+    "transfer(W, O, A)"
+   ],
+   "step": 10,
+   "named": "no",
+   "kind": "circle",
+   "def": {
+    "circle": [
+     0,
+     10
+    ]
+   }
+  },
+  {
+   "id": 26,
+   "name": "E",
+   "path": [
+    "transfer(W, O, A)"
+   ],
+   "step": 10,
+   "named": "no",
+   "kind": "point",
+   "def": {
+    "meet": [
+     24,
+     25
+    ],
+    "choice": {
+     "kind": "farthest",
+     "ref": {
+      "object": 23
+     }
+    },
+    "other": {
+     "x": {
+      "num": [
+       [
+        [
+         "1",
+         "0"
+        ],
+        "0"
+       ],
+       "0"
+      ],
+      "den": "2"
+     },
+     "y": {
+      "num": [
+       [
+        [
+         "0",
+         "-1"
+        ],
+        "0"
+       ],
+       "0"
+      ],
+      "den": "2"
+     }
+    }
+   },
+   "coords": {
+    "x": {
+     "num": [
+      [
+       [
+        "-1",
+        "0"
+       ],
+       "0"
+      ],
+      "0"
+     ],
+     "den": "2"
+    },
+    "y": {
+     "num": [
+      [
+       [
+        "0",
+        "1"
+       ],
+       "0"
+      ],
+      "0"
+     ],
+     "den": "2"
+    }
+   }
+  },
+  {
+   "id": 27,
+   "name": "cde",
+   "path": [
+    "transfer(W, O, A)"
+   ],
+   "step": 10,
+   "named": "no",
+   "kind": "circle",
+   "def": {
+    "circle": [
+     23,
+     26
+    ]
+   }
+  },
+  {
+   "id": 28,
+   "name": "dO",
+   "path": [
+    "transfer(W, O, A)"
+   ],
+   "step": 10,
+   "named": "no",
+   "kind": "line",
+   "def": {
+    "line": [
+     23,
+     20
+    ]
+   }
+  },
+  {
+   "id": 29,
+   "name": "F",
+   "path": [
+    "transfer(W, O, A)"
+   ],
+   "step": 10,
+   "named": "no",
+   "kind": "point",
+   "def": {
+    "meet": [
+     28,
+     27
+    ],
+    "choice": {
+     "kind": "nearest",
+     "ref": {
+      "object": 20
+     }
+    },
+    "other": {
+     "x": {
+      "num": [
+       [
+        [
+         "-1",
+         "0"
+        ],
+        "0"
+       ],
+       "0"
+      ],
+      "den": "2"
+     },
+     "y": {
+      "num": [
+       [
+        "0",
+        [
+         "0",
+         "-1"
+        ]
+       ],
+       "0"
+      ],
+      "den": "4"
+     }
+    }
+   },
+   "coords": {
+    "x": {
+     "num": [
+      [
+       "0",
+       [
+        "1",
+        "0"
+       ]
+      ],
+      "0"
+     ],
+     "den": "4"
+    },
+    "y": {
+     "num": [
+      [
+       [
+        "0",
+        "1"
+       ],
+       "0"
+      ],
+      "0"
+     ],
+     "den": "2"
+    }
+   }
+  },
+  {
+   "id": 30,
+   "name": "cw",
+   "path": [],
+   "step": 10,
+   "named": "yes",
+   "kind": "circle",
+   "def": {
+    "circle": [
+     20,
+     29
+    ]
+   }
+  },
+  {
+   "id": 31,
+   "name": "P4",
+   "path": [],
+   "step": 11,
+   "named": "yes",
+   "kind": "point",
+   "def": {
+    "meet": [
+     30,
+     3
+    ],
+    "choice": {
+     "kind": "lexFirst"
+    },
+    "other": {
+     "x": {
+      "num": [
+       [
+        [
+         "-2",
+         "0"
+        ],
+        [
+         "1",
+         "0"
+        ]
+       ],
+       "0"
+      ],
+      "den": "8"
+     },
+     "y": {
+      "num": [
+       "0",
+       [
+        [
+         "1",
+         "0"
+        ],
+        "0"
+       ]
+      ],
+      "den": "16"
+     }
+    }
+   },
+   "coords": {
+    "x": {
+     "num": [
+      [
+       [
+        "-2",
+        "0"
+       ],
+       [
+        "1",
+        "0"
+       ]
+      ],
+      "0"
+     ],
+     "den": "8"
+    },
+    "y": {
+     "num": [
+      "0",
+      [
+       [
+        "-1",
+        "0"
+       ],
+       "0"
+      ]
+     ],
+     "den": "16"
+    }
+   }
+  },
+  {
+   "id": 32,
+   "name": "P1",
+   "path": [],
+   "step": 11,
+   "named": "yes",
+   "kind": "point",
+   "def": {
+    "meet": [
+     30,
+     3
+    ],
+    "choice": {
+     "kind": "lexSecond"
+    },
+    "other": {
+     "x": {
+      "num": [
+       [
+        [
+         "-2",
+         "0"
+        ],
+        [
+         "1",
+         "0"
+        ]
+       ],
+       "0"
+      ],
+      "den": "8"
+     },
+     "y": {
+      "num": [
+       "0",
+       [
+        [
+         "-1",
+         "0"
+        ],
+        "0"
+       ]
+      ],
+      "den": "16"
+     }
+    }
+   },
+   "coords": {
+    "x": {
+     "num": [
+      [
+       [
+        "-2",
+        "0"
+       ],
+       [
+        "1",
+        "0"
+       ]
+      ],
+      "0"
+     ],
+     "den": "8"
+    },
+    "y": {
+     "num": [
+      "0",
+      [
+       [
+        "1",
+        "0"
+       ],
+       "0"
+      ]
+     ],
+     "den": "16"
+    }
+   }
+  },
+  {
+   "id": 33,
+   "name": "c1",
+   "path": [
+    "transfer(V, O, A)"
+   ],
+   "step": 12,
+   "named": "no",
+   "kind": "circle",
+   "def": {
+    "circle": [
+     19,
+     0
+    ]
+   }
+  },
+  {
+   "id": 34,
+   "name": "c2",
+   "path": [
+    "transfer(V, O, A)"
+   ],
+   "step": 12,
+   "named": "no",
+   "kind": "circle",
+   "def": {
+    "circle": [
+     0,
+     19
+    ]
+   }
+  },
+  {
+   "id": 35,
+   "name": "D",
+   "path": [
+    "transfer(V, O, A)"
+   ],
+   "step": 12,
+   "named": "no",
+   "kind": "point",
+   "def": {
+    "meet": [
+     33,
+     34
+    ],
+    "choice": {
+     "kind": "left",
+     "line": [
+      19,
+      0
+     ]
+    },
+    "other": {
+     "x": {
+      "num": [
+       [
+        [
+         "-2",
+         "0"
+        ],
+        [
+         "-1",
+         "0"
+        ]
+       ],
+       "0"
+      ],
+      "den": "8"
+     },
+     "y": {
+      "num": [
+       [
+        [
+         "0",
+         "-2"
+        ],
+        [
+         "0",
+         "-1"
+        ]
+       ],
+       "0"
+      ],
+      "den": "8"
+     }
+    }
+   },
+   "coords": {
+    "x": {
+     "num": [
+      [
+       [
+        "-2",
+        "0"
+       ],
+       [
+        "-1",
+        "0"
+       ]
+      ],
+      "0"
+     ],
+     "den": "8"
+    },
+    "y": {
+     "num": [
+      [
+       [
+        "0",
+        "2"
+       ],
+       [
+        "0",
+        "1"
+       ]
+      ],
+      "0"
+     ],
+     "den": "8"
+    }
+   }
+  },
+  {
+   "id": 36,
+   "name": "da",
+   "path": [
+    "transfer(V, O, A)"
+   ],
+   "step": 12,
+   "named": "no",
+   "kind": "line",
+   "def": {
+    "line": [
+     35,
+     0
+    ]
+   }
+  },
+  {
+   "id": 37,
+   "name": "cab",
+   "path": [
+    "transfer(V, O, A)"
+   ],
+   "step": 12,
+   "named": "no",
+   "kind": "circle",
+   "def": {
+    "circle": [
+     0,
+     10
+    ]
+   }
+  },
+  {
+   "id": 38,
+   "name": "E",
+   "path": [
+    "transfer(V, O, A)"
+   ],
+   "step": 12,
+   "named": "no",
+   "kind": "point",
+   "def": {
+    "meet": [
+     36,
+     37
+    ],
+    "choice": {
+     "kind": "farthest",
+     "ref": {
+      "object": 35
+     }
+    },
+    "other": {
+     "x": {
+      "num": [
+       [
+        [
+         "-1",
+         "0"
+        ],
+        "0"
+       ],
+       "0"
+      ],
+      "den": "2"
+     },
+     "y": {
+      "num": [
+       [
+        [
+         "0",
+         "1"
+        ],
+        "0"
+       ],
+       "0"
+      ],
+      "den": "2"
+     }
+    }
+   },
+   "coords": {
+    "x": {
+     "num": [
+      [
+       [
+        "1",
+        "0"
+       ],
+       "0"
+      ],
+      "0"
+     ],
+     "den": "2"
+    },
+    "y": {
+     "num": [
+      [
+       [
+        "0",
+        "-1"
+       ],
+       "0"
+      ],
+      "0"
+     ],
+     "den": "2"
+    }
+   }
+  },
+  {
+   "id": 39,
+   "name": "cde",
+   "path": [
+    "transfer(V, O, A)"
+   ],
+   "step": 12,
+   "named": "no",
+   "kind": "circle",
+   "def": {
+    "circle": [
+     35,
+     38
+    ]
+   }
+  },
+  {
+   "id": 40,
+   "name": "dO",
+   "path": [
+    "transfer(V, O, A)"
+   ],
+   "step": 12,
+   "named": "no",
+   "kind": "line",
+   "def": {
+    "line": [
+     35,
+     19
+    ]
+   }
+  },
+  {
+   "id": 41,
+   "name": "F",
+   "path": [
+    "transfer(V, O, A)"
+   ],
+   "step": 12,
+   "named": "no",
+   "kind": "point",
+   "def": {
+    "meet": [
+     40,
+     39
+    ],
+    "choice": {
+     "kind": "nearest",
+     "ref": {
+      "object": 19
+     }
+    },
+    "other": {
+     "x": {
+      "num": [
+       [
+        [
+         "1",
+         "0"
+        ],
+        "0"
+       ],
+       "0"
+      ],
+      "den": "2"
+     },
+     "y": {
+      "num": [
+       [
+        [
+         "0",
+         "4"
+        ],
+        [
+         "0",
+         "1"
+        ]
+       ],
+       "0"
+      ],
+      "den": "4"
+     }
+    }
+   },
+   "coords": {
+    "x": {
+     "num": [
+      [
+       [
+        "-4",
+        "0"
+       ],
+       [
+        "-1",
+        "0"
+       ]
+      ],
+      "0"
+     ],
+     "den": "4"
+    },
+    "y": {
+     "num": [
+      [
+       [
+        "0",
+        "-1"
+       ],
+       "0"
+      ],
+      "0"
+     ],
+     "den": "2"
+    }
+   }
+  },
+  {
+   "id": 42,
+   "name": "cv",
+   "path": [],
+   "step": 12,
+   "named": "yes",
+   "kind": "circle",
+   "def": {
+    "circle": [
+     19,
+     41
+    ]
+   }
+  },
+  {
+   "id": 43,
+   "name": "P3",
+   "path": [],
+   "step": 13,
+   "named": "yes",
+   "kind": "point",
+   "def": {
+    "meet": [
+     42,
+     3
+    ],
+    "choice": {
+     "kind": "lexFirst"
+    },
+    "other": {
+     "x": {
+      "num": [
+       [
+        [
+         "-2",
+         "0"
+        ],
+        [
+         "-1",
+         "0"
+        ]
+       ],
+       "0"
+      ],
+      "den": "8"
+     },
+     "y": {
+      "num": [
+       "0",
+       [
+        [
+         "-2",
+         "0"
+        ],
+        [
+         "1",
+         "0"
+        ]
+       ]
+      ],
+      "den": "64"
+     }
+    }
+   },
+   "coords": {
+    "x": {
+     "num": [
+      [
+       [
+        "-2",
+        "0"
+       ],
+       [
+        "-1",
+        "0"
+       ]
+      ],
+      "0"
+     ],
+     "den": "8"
+    },
+    "y": {
+     "num": [
+      "0",
+      [
+       [
+        "2",
+        "0"
+       ],
+       [
+        "-1",
+        "0"
+       ]
+      ]
+     ],
+     "den": "64"
+    }
+   }
+  },
+  {
+   "id": 44,
+   "name": "P2",
+   "path": [],
+   "step": 13,
+   "named": "yes",
+   "kind": "point",
+   "def": {
+    "meet": [
+     42,
+     3
+    ],
+    "choice": {
+     "kind": "lexSecond"
+    },
+    "other": {
+     "x": {
+      "num": [
+       [
+        [
+         "-2",
+         "0"
+        ],
+        [
+         "-1",
+         "0"
+        ]
+       ],
+       "0"
+      ],
+      "den": "8"
+     },
+     "y": {
+      "num": [
+       "0",
+       [
+        [
+         "2",
+         "0"
+        ],
+        [
+         "-1",
+         "0"
+        ]
+       ]
+      ],
+      "den": "64"
+     }
+    }
+   },
+   "coords": {
+    "x": {
+     "num": [
+      [
+       [
+        "-2",
+        "0"
+       ],
+       [
+        "-1",
+        "0"
+       ]
+      ],
+      "0"
+     ],
+     "den": "8"
+    },
+    "y": {
+     "num": [
+      "0",
+      [
+       [
+        "-2",
+        "0"
+       ],
+       [
+        "1",
+        "0"
+       ]
+      ]
+     ],
+     "den": "64"
+    }
+   }
+  }
+ ],
+ "asserts": [
+  {
+   "pred": {
+    "kind": "dist",
+    "cmp": "==",
+    "args": [
+     32,
+     44,
+     1,
+     32
+    ]
+   },
+   "text": "dist P1 P2 == dist P0 P1",
+   "step": 14,
+   "context": []
+  },
+  {
+   "pred": {
+    "kind": "dist",
+    "cmp": "==",
+    "args": [
+     44,
+     43,
+     1,
+     32
+    ]
+   },
+   "text": "dist P2 P3 == dist P0 P1",
+   "step": 15,
+   "context": []
+  },
+  {
+   "pred": {
+    "kind": "dist",
+    "cmp": "==",
+    "args": [
+     43,
+     31,
+     1,
+     32
+    ]
+   },
+   "text": "dist P3 P4 == dist P0 P1",
+   "step": 16,
+   "context": []
+  },
+  {
+   "pred": {
+    "kind": "dist",
+    "cmp": "==",
+    "args": [
+     31,
+     1,
+     1,
+     32
+    ]
+   },
+   "text": "dist P4 P0 == dist P0 P1",
+   "step": 17,
+   "context": []
+  },
+  {
+   "pred": {
+    "kind": "ccw",
+    "args": [
+     1,
+     32,
+     44
+    ]
+   },
+   "text": "ccw P0 P1 P2",
+   "step": 18,
+   "context": []
+  },
+  {
+   "pred": {
+    "kind": "ccw",
+    "args": [
+     1,
+     32,
+     43
+    ]
+   },
+   "text": "ccw P0 P1 P3",
+   "step": 19,
+   "context": []
+  },
+  {
+   "pred": {
+    "kind": "ccw",
+    "args": [
+     1,
+     32,
+     31
+    ]
+   },
+   "text": "ccw P0 P1 P4",
+   "step": 20,
+   "context": []
+  },
+  {
+   "pred": {
+    "kind": "ccw",
+    "args": [
+     32,
+     44,
+     1
+    ]
+   },
+   "text": "ccw P1 P2 P0",
+   "step": 21,
+   "context": []
+  },
+  {
+   "pred": {
+    "kind": "ccw",
+    "args": [
+     32,
+     44,
+     43
+    ]
+   },
+   "text": "ccw P1 P2 P3",
+   "step": 22,
+   "context": []
+  },
+  {
+   "pred": {
+    "kind": "ccw",
+    "args": [
+     32,
+     44,
+     31
+    ]
+   },
+   "text": "ccw P1 P2 P4",
+   "step": 23,
+   "context": []
+  },
+  {
+   "pred": {
+    "kind": "ccw",
+    "args": [
+     44,
+     43,
+     1
+    ]
+   },
+   "text": "ccw P2 P3 P0",
+   "step": 24,
+   "context": []
+  },
+  {
+   "pred": {
+    "kind": "ccw",
+    "args": [
+     44,
+     43,
+     32
+    ]
+   },
+   "text": "ccw P2 P3 P1",
+   "step": 25,
+   "context": []
+  },
+  {
+   "pred": {
+    "kind": "ccw",
+    "args": [
+     44,
+     43,
+     31
+    ]
+   },
+   "text": "ccw P2 P3 P4",
+   "step": 26,
+   "context": []
+  },
+  {
+   "pred": {
+    "kind": "ccw",
+    "args": [
+     43,
+     31,
+     1
+    ]
+   },
+   "text": "ccw P3 P4 P0",
+   "step": 27,
+   "context": []
+  },
+  {
+   "pred": {
+    "kind": "ccw",
+    "args": [
+     43,
+     31,
+     32
+    ]
+   },
+   "text": "ccw P3 P4 P1",
+   "step": 28,
+   "context": []
+  },
+  {
+   "pred": {
+    "kind": "ccw",
+    "args": [
+     43,
+     31,
+     44
+    ]
+   },
+   "text": "ccw P3 P4 P2",
+   "step": 29,
+   "context": []
+  },
+  {
+   "pred": {
+    "kind": "ccw",
+    "args": [
+     31,
+     1,
+     32
+    ]
+   },
+   "text": "ccw P4 P0 P1",
+   "step": 30,
+   "context": []
+  },
+  {
+   "pred": {
+    "kind": "ccw",
+    "args": [
+     31,
+     1,
+     44
+    ]
+   },
+   "text": "ccw P4 P0 P2",
+   "step": 31,
+   "context": []
+  },
+  {
+   "pred": {
+    "kind": "ccw",
+    "args": [
+     31,
+     1,
+     43
+    ]
+   },
+   "text": "ccw P4 P0 P3",
+   "step": 32,
+   "context": []
+  }
+ ],
+ "steps": [
+  {
+   "line": 5,
+   "text": "given O = (0, 0)",
+   "objects": [
+    0
+   ],
+   "notes": []
+  },
+  {
+   "line": 6,
+   "text": "given P0 = (1, 0)",
+   "objects": [
+    1
+   ],
+   "notes": [
+    "The centre and the first vertex."
+   ]
+  },
+  {
+   "line": 9,
+   "text": "x = line O P0",
+   "objects": [
+    2
+   ],
+   "notes": []
+  },
+  {
+   "line": 10,
+   "text": "u = circle O P0",
+   "objects": [
+    3
+   ],
+   "notes": []
+  },
+  {
+   "line": 11,
+   "text": "B = meet x u except P0",
+   "objects": [
+    4
+   ],
+   "notes": []
+  },
+  {
+   "line": 12,
+   "text": "y = perpBisector(B, P0)",
+   "objects": [
+    9
+   ],
+   "notes": []
+  },
+  {
+   "line": 13,
+   "text": "A = meet y u left O P0",
+   "objects": [
+    10
+   ],
+   "notes": [
+    "The axes; $B = (-1, 0)$ and $A = (0, 1)$."
+   ]
+  },
+  {
+   "line": 18,
+   "text": "M = midpoint(O, B)",
+   "objects": [
+    17
+   ],
+   "notes": []
+  },
+  {
+   "line": 19,
+   "text": "c = circle M A",
+   "objects": [
+    18
+   ],
+   "notes": []
+  },
+  {
+   "line": 20,
+   "text": "V, W = meet x c",
+   "objects": [
+    19,
+    20
+   ],
+   "notes": [
+    "$M = (-1/2, 0)$, and $c$ is the Carlyle circle of $x^2 + x - 1 = 0$: $W = (p_1, 0)$ lies inside $u$ and $V = (p_2, 0)$ outside it."
+   ]
+  },
+  {
+   "line": 25,
+   "text": "cw = transfer(W, O, A)",
+   "objects": [
+    30
+   ],
+   "notes": []
+  },
+  {
+   "line": 26,
+   "text": "P4, P1 = meet cw u",
+   "objects": [
+    31,
+    32
+   ],
+   "notes": [
+    "The circle about $W$ with radius $|O A| = 1$ meets $u$ where $x = p_1 / 2 = cos(2 pi / 5)$: at $P_1$ and $P_4$. (The construction `transfer` copies a length with a compass that collapses when lifted, as in Euclid I.2.)"
+   ]
+  },
+  {
+   "line": 29,
+   "text": "cv = transfer(V, O, A)",
+   "objects": [
+    42
+   ],
+   "notes": []
+  },
+  {
+   "line": 30,
+   "text": "P3, P2 = meet cv u",
+   "objects": [
+    43,
+    44
+   ],
+   "notes": [
+    "Likewise about $V$: $x = p_2 / 2 = cos(4 pi / 5)$, at $P_2$ and $P_3$."
+   ]
+  },
+  {
+   "line": 37,
+   "text": "assert dist P1 P2 == dist P0 P1",
+   "objects": [],
+   "notes": []
+  },
+  {
+   "line": 38,
+   "text": "assert dist P2 P3 == dist P0 P1",
+   "objects": [],
+   "notes": []
+  },
+  {
+   "line": 39,
+   "text": "assert dist P3 P4 == dist P0 P1",
+   "objects": [],
+   "notes": []
+  },
+  {
+   "line": 40,
+   "text": "assert dist P4 P0 == dist P0 P1",
+   "objects": [],
+   "notes": [
+    "The five sides are equal."
+   ]
+  },
+  {
+   "line": 43,
+   "text": "assert ccw P0 P1 P2",
+   "objects": [],
+   "notes": []
+  },
+  {
+   "line": 44,
+   "text": "assert ccw P0 P1 P3",
+   "objects": [],
+   "notes": []
+  },
+  {
+   "line": 45,
+   "text": "assert ccw P0 P1 P4",
+   "objects": [],
+   "notes": []
+  },
+  {
+   "line": 46,
+   "text": "assert ccw P1 P2 P0",
+   "objects": [],
+   "notes": []
+  },
+  {
+   "line": 47,
+   "text": "assert ccw P1 P2 P3",
+   "objects": [],
+   "notes": []
+  },
+  {
+   "line": 48,
+   "text": "assert ccw P1 P2 P4",
+   "objects": [],
+   "notes": []
+  },
+  {
+   "line": 49,
+   "text": "assert ccw P2 P3 P0",
+   "objects": [],
+   "notes": []
+  },
+  {
+   "line": 50,
+   "text": "assert ccw P2 P3 P1",
+   "objects": [],
+   "notes": []
+  },
+  {
+   "line": 51,
+   "text": "assert ccw P2 P3 P4",
+   "objects": [],
+   "notes": []
+  },
+  {
+   "line": 52,
+   "text": "assert ccw P3 P4 P0",
+   "objects": [],
+   "notes": []
+  },
+  {
+   "line": 53,
+   "text": "assert ccw P3 P4 P1",
+   "objects": [],
+   "notes": []
+  },
+  {
+   "line": 54,
+   "text": "assert ccw P3 P4 P2",
+   "objects": [],
+   "notes": []
+  },
+  {
+   "line": 55,
+   "text": "assert ccw P4 P0 P1",
+   "objects": [],
+   "notes": []
+  },
+  {
+   "line": 56,
+   "text": "assert ccw P4 P0 P2",
+   "objects": [],
+   "notes": []
+  },
+  {
+   "line": 57,
+   "text": "assert ccw P4 P0 P3",
+   "objects": [],
+   "notes": [
+    "For every side, the other vertices lie to its left: the pentagon $P_0 P_1 P_2 P_3 P_4$ is convex. A convex polygon inscribed in a circle with equal sides is regular."
+   ]
+  }
+ ]
+}

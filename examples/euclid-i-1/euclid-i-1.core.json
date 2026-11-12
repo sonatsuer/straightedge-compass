@@ -1,0 +1,240 @@
+{
+ "format": "straightedge-compass-core",
+ "version": 1,
+ "title": "Euclid I.1: an equilateral triangle on a given segment",
+ "givens": 2,
+ "tower": [
+  {
+   "num": "12",
+   "den": "1"
+  }
+ ],
+ "objects": [
+  {
+   "id": 0,
+   "name": "A",
+   "path": [],
+   "step": 0,
+   "named": "yes",
+   "kind": "point",
+   "def": {
+    "given": {
+     "x": "0",
+     "y": "0"
+    }
+   },
+   "coords": {
+    "x": {
+     "num": "0",
+     "den": "1"
+    },
+    "y": {
+     "num": "0",
+     "den": "1"
+    }
+   }
+  },
+  {
+   "id": 1,
+   "name": "B",
+   "path": [],
+   "step": 1,
+   "named": "yes",
+   "kind": "point",
+   "def": {
+    "given": {
+     "x": "1",
+     "y": "0"
+    }
+   },
+   "coords": {
+    "x": {
+     "num": [
+      "1",
+      "0"
+     ],
+     "den": "1"
+    },
+    "y": {
+     "num": "0",
+     "den": "1"
+    }
+   }
+  },
+  {
+   "id": 2,
+   "name": "c1",
+   "path": [],
+   "step": 2,
+   "named": "yes",
+   "kind": "circle",
+   "def": {
+    "circle": [
+     0,
+     1
+    ]
+   }
+  },
+  {
+   "id": 3,
+   "name": "c2",
+   "path": [],
+   "step": 3,
+   "named": "yes",
+   "kind": "circle",
+   "def": {
+    "circle": [
+     1,
+     0
+    ]
+   }
+  },
+  {
+   "id": 4,
+   "name": "C",
+   "path": [],
+   "step": 4,
+   "named": "yes",
+   "kind": "point",
+   "def": {
+    "meet": [
+     2,
+     3
+    ],
+    "choice": {
+     "kind": "left",
+     "line": [
+      0,
+      1
+     ]
+    },
+    "other": {
+     "x": {
+      "num": [
+       "1",
+       "0"
+      ],
+      "den": "2"
+     },
+     "y": {
+      "num": [
+       "0",
+       "-1"
+      ],
+      "den": "4"
+     }
+    }
+   },
+   "coords": {
+    "x": {
+     "num": [
+      "1",
+      "0"
+     ],
+     "den": "2"
+    },
+    "y": {
+     "num": [
+      "0",
+      "1"
+     ],
+     "den": "4"
+    }
+   }
+  }
+ ],
+ "asserts": [
+  {
+   "pred": {
+    "kind": "dist",
+    "cmp": "==",
+    "args": [
+     0,
+     4,
+     0,
+     1
+    ]
+   },
+   "text": "dist A C == dist A B",
+   "step": 5,
+   "context": []
+  },
+  {
+   "pred": {
+    "kind": "dist",
+    "cmp": "==",
+    "args": [
+     1,
+     4,
+     0,
+     1
+    ]
+   },
+   "text": "dist B C == dist A B",
+   "step": 6,
+   "context": []
+  }
+ ],
+ "steps": [
+  {
+   "line": 5,
+   "text": "given A = (0, 0)",
+   "objects": [
+    0
+   ],
+   "notes": []
+  },
+  {
+   "line": 6,
+   "text": "given B = (1, 0)",
+   "objects": [
+    1
+   ],
+   "notes": []
+  },
+  {
+   "line": 8,
+   "text": "c1 = circle A B",
+   "objects": [
+    2
+   ],
+   "notes": [
+    "The circle with centre $A$ through $B$: its points are at distance $|A B|$ from $A$."
+   ]
+  },
+  {
+   "line": 11,
+   "text": "c2 = circle B A",
+   "objects": [
+    3
+   ],
+   "notes": [
+    "The circle with centre $B$ through $A$: its points are at distance $|B A|$ from $B$."
+   ]
+  },
+  {
+   "line": 16,
+   "text": "C = meet c1 c2 left A B",
+   "objects": [
+    4
+   ],
+   "notes": [
+    "$C$ lies on both circles. Of the two intersection points we take the one to the left of $A -> B$."
+   ]
+  },
+  {
+   "line": 21,
+   "text": "assert dist A C == dist A B",
+   "objects": [],
+   "notes": []
+  },
+  {
+   "line": 22,
+   "text": "assert dist B C == dist A B",
+   "objects": [],
+   "notes": [
+    "So $|C A| = |A B| = |B C|$, and $A B C$ is equilateral."
+   ]
+  }
+ ]
+}

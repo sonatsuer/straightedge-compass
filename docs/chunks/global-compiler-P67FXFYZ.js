@@ -1,0 +1,1 @@
+import"./chunk-VC46IEJQ.js";var r,i,o=!1;function u(){return o?r:void 0}function c(t,n){let e=r||t();return i!==void 0?i:i=(async()=>(o=!0,await e.init(n),r=e))()}function p(t,n,e,a){let l=u();if(l){e(l);return}c(t,n).then(e).catch(a)}export{c as createGlobalCompiler,u as getGlobalCompiler,p as withGlobalCompiler};

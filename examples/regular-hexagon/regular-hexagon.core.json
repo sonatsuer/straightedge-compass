@@ -1,0 +1,1031 @@
+{
+ "format": "straightedge-compass-core",
+ "version": 1,
+ "title": "The regular hexagon (Euclid IV.15)",
+ "givens": 2,
+ "tower": [
+  {
+   "num": "12",
+   "den": "1"
+  }
+ ],
+ "objects": [
+  {
+   "id": 0,
+   "name": "O",
+   "path": [],
+   "step": 0,
+   "named": "yes",
+   "kind": "point",
+   "def": {
+    "given": {
+     "x": "0",
+     "y": "0"
+    }
+   },
+   "coords": {
+    "x": {
+     "num": "0",
+     "den": "1"
+    },
+    "y": {
+     "num": "0",
+     "den": "1"
+    }
+   }
+  },
+  {
+   "id": 1,
+   "name": "P0",
+   "path": [],
+   "step": 1,
+   "named": "yes",
+   "kind": "point",
+   "def": {
+    "given": {
+     "x": "1",
+     "y": "0"
+    }
+   },
+   "coords": {
+    "x": {
+     "num": [
+      "1",
+      "0"
+     ],
+     "den": "1"
+    },
+    "y": {
+     "num": "0",
+     "den": "1"
+    }
+   }
+  },
+  {
+   "id": 2,
+   "name": "u",
+   "path": [],
+   "step": 2,
+   "named": "yes",
+   "kind": "circle",
+   "def": {
+    "circle": [
+     0,
+     1
+    ]
+   }
+  },
+  {
+   "id": 3,
+   "name": "x",
+   "path": [],
+   "step": 3,
+   "named": "yes",
+   "kind": "line",
+   "def": {
+    "line": [
+     0,
+     1
+    ]
+   }
+  },
+  {
+   "id": 4,
+   "name": "P3",
+   "path": [],
+   "step": 4,
+   "named": "yes",
+   "kind": "point",
+   "def": {
+    "meet": [
+     3,
+     2
+    ],
+    "choice": {
+     "kind": "except",
+     "ref": {
+      "object": 1
+     }
+    },
+    "other": {
+     "x": {
+      "num": [
+       "1",
+       "0"
+      ],
+      "den": "1"
+     },
+     "y": {
+      "num": "0",
+      "den": "1"
+     }
+    }
+   },
+   "coords": {
+    "x": {
+     "num": [
+      "-1",
+      "0"
+     ],
+     "den": "1"
+    },
+    "y": {
+     "num": "0",
+     "den": "1"
+    }
+   }
+  },
+  {
+   "id": 5,
+   "name": "c0",
+   "path": [],
+   "step": 5,
+   "named": "yes",
+   "kind": "circle",
+   "def": {
+    "circle": [
+     1,
+     0
+    ]
+   }
+  },
+  {
+   "id": 6,
+   "name": "P5",
+   "path": [],
+   "step": 6,
+   "named": "yes",
+   "kind": "point",
+   "def": {
+    "meet": [
+     5,
+     2
+    ],
+    "choice": {
+     "kind": "lexFirst"
+    },
+    "other": {
+     "x": {
+      "num": [
+       "1",
+       "0"
+      ],
+      "den": "2"
+     },
+     "y": {
+      "num": [
+       "0",
+       "1"
+      ],
+      "den": "4"
+     }
+    }
+   },
+   "coords": {
+    "x": {
+     "num": [
+      "1",
+      "0"
+     ],
+     "den": "2"
+    },
+    "y": {
+     "num": [
+      "0",
+      "-1"
+     ],
+     "den": "4"
+    }
+   }
+  },
+  {
+   "id": 7,
+   "name": "P1",
+   "path": [],
+   "step": 6,
+   "named": "yes",
+   "kind": "point",
+   "def": {
+    "meet": [
+     5,
+     2
+    ],
+    "choice": {
+     "kind": "lexSecond"
+    },
+    "other": {
+     "x": {
+      "num": [
+       "1",
+       "0"
+      ],
+      "den": "2"
+     },
+     "y": {
+      "num": [
+       "0",
+       "-1"
+      ],
+      "den": "4"
+     }
+    }
+   },
+   "coords": {
+    "x": {
+     "num": [
+      "1",
+      "0"
+     ],
+     "den": "2"
+    },
+    "y": {
+     "num": [
+      "0",
+      "1"
+     ],
+     "den": "4"
+    }
+   }
+  },
+  {
+   "id": 8,
+   "name": "c3",
+   "path": [],
+   "step": 7,
+   "named": "yes",
+   "kind": "circle",
+   "def": {
+    "circle": [
+     4,
+     0
+    ]
+   }
+  },
+  {
+   "id": 9,
+   "name": "P4",
+   "path": [],
+   "step": 8,
+   "named": "yes",
+   "kind": "point",
+   "def": {
+    "meet": [
+     8,
+     2
+    ],
+    "choice": {
+     "kind": "lexFirst"
+    },
+    "other": {
+     "x": {
+      "num": [
+       "-1",
+       "0"
+      ],
+      "den": "2"
+     },
+     "y": {
+      "num": [
+       "0",
+       "1"
+      ],
+      "den": "4"
+     }
+    }
+   },
+   "coords": {
+    "x": {
+     "num": [
+      "-1",
+      "0"
+     ],
+     "den": "2"
+    },
+    "y": {
+     "num": [
+      "0",
+      "-1"
+     ],
+     "den": "4"
+    }
+   }
+  },
+  {
+   "id": 10,
+   "name": "P2",
+   "path": [],
+   "step": 8,
+   "named": "yes",
+   "kind": "point",
+   "def": {
+    "meet": [
+     8,
+     2
+    ],
+    "choice": {
+     "kind": "lexSecond"
+    },
+    "other": {
+     "x": {
+      "num": [
+       "-1",
+       "0"
+      ],
+      "den": "2"
+     },
+     "y": {
+      "num": [
+       "0",
+       "-1"
+      ],
+      "den": "4"
+     }
+    }
+   },
+   "coords": {
+    "x": {
+     "num": [
+      "-1",
+      "0"
+     ],
+     "den": "2"
+    },
+    "y": {
+     "num": [
+      "0",
+      "1"
+     ],
+     "den": "4"
+    }
+   }
+  }
+ ],
+ "asserts": [
+  {
+   "pred": {
+    "kind": "dist",
+    "cmp": "==",
+    "args": [
+     1,
+     7,
+     0,
+     1
+    ]
+   },
+   "text": "dist P0 P1 == dist O P0",
+   "step": 9,
+   "context": []
+  },
+  {
+   "pred": {
+    "kind": "dist",
+    "cmp": "==",
+    "args": [
+     7,
+     10,
+     0,
+     1
+    ]
+   },
+   "text": "dist P1 P2 == dist O P0",
+   "step": 10,
+   "context": []
+  },
+  {
+   "pred": {
+    "kind": "dist",
+    "cmp": "==",
+    "args": [
+     10,
+     4,
+     0,
+     1
+    ]
+   },
+   "text": "dist P2 P3 == dist O P0",
+   "step": 11,
+   "context": []
+  },
+  {
+   "pred": {
+    "kind": "dist",
+    "cmp": "==",
+    "args": [
+     4,
+     9,
+     0,
+     1
+    ]
+   },
+   "text": "dist P3 P4 == dist O P0",
+   "step": 12,
+   "context": []
+  },
+  {
+   "pred": {
+    "kind": "dist",
+    "cmp": "==",
+    "args": [
+     9,
+     6,
+     0,
+     1
+    ]
+   },
+   "text": "dist P4 P5 == dist O P0",
+   "step": 13,
+   "context": []
+  },
+  {
+   "pred": {
+    "kind": "dist",
+    "cmp": "==",
+    "args": [
+     6,
+     1,
+     0,
+     1
+    ]
+   },
+   "text": "dist P5 P0 == dist O P0",
+   "step": 14,
+   "context": []
+  },
+  {
+   "pred": {
+    "kind": "ccw",
+    "args": [
+     1,
+     7,
+     10
+    ]
+   },
+   "text": "ccw P0 P1 P2",
+   "step": 15,
+   "context": []
+  },
+  {
+   "pred": {
+    "kind": "ccw",
+    "args": [
+     1,
+     7,
+     4
+    ]
+   },
+   "text": "ccw P0 P1 P3",
+   "step": 16,
+   "context": []
+  },
+  {
+   "pred": {
+    "kind": "ccw",
+    "args": [
+     1,
+     7,
+     9
+    ]
+   },
+   "text": "ccw P0 P1 P4",
+   "step": 17,
+   "context": []
+  },
+  {
+   "pred": {
+    "kind": "ccw",
+    "args": [
+     1,
+     7,
+     6
+    ]
+   },
+   "text": "ccw P0 P1 P5",
+   "step": 18,
+   "context": []
+  },
+  {
+   "pred": {
+    "kind": "ccw",
+    "args": [
+     7,
+     10,
+     1
+    ]
+   },
+   "text": "ccw P1 P2 P0",
+   "step": 19,
+   "context": []
+  },
+  {
+   "pred": {
+    "kind": "ccw",
+    "args": [
+     7,
+     10,
+     4
+    ]
+   },
+   "text": "ccw P1 P2 P3",
+   "step": 20,
+   "context": []
+  },
+  {
+   "pred": {
+    "kind": "ccw",
+    "args": [
+     7,
+     10,
+     9
+    ]
+   },
+   "text": "ccw P1 P2 P4",
+   "step": 21,
+   "context": []
+  },
+  {
+   "pred": {
+    "kind": "ccw",
+    "args": [
+     7,
+     10,
+     6
+    ]
+   },
+   "text": "ccw P1 P2 P5",
+   "step": 22,
+   "context": []
+  },
+  {
+   "pred": {
+    "kind": "ccw",
+    "args": [
+     10,
+     4,
+     1
+    ]
+   },
+   "text": "ccw P2 P3 P0",
+   "step": 23,
+   "context": []
+  },
+  {
+   "pred": {
+    "kind": "ccw",
+    "args": [
+     10,
+     4,
+     7
+    ]
+   },
+   "text": "ccw P2 P3 P1",
+   "step": 24,
+   "context": []
+  },
+  {
+   "pred": {
+    "kind": "ccw",
+    "args": [
+     10,
+     4,
+     9
+    ]
+   },
+   "text": "ccw P2 P3 P4",
+   "step": 25,
+   "context": []
+  },
+  {
+   "pred": {
+    "kind": "ccw",
+    "args": [
+     10,
+     4,
+     6
+    ]
+   },
+   "text": "ccw P2 P3 P5",
+   "step": 26,
+   "context": []
+  },
+  {
+   "pred": {
+    "kind": "ccw",
+    "args": [
+     4,
+     9,
+     1
+    ]
+   },
+   "text": "ccw P3 P4 P0",
+   "step": 27,
+   "context": []
+  },
+  {
+   "pred": {
+    "kind": "ccw",
+    "args": [
+     4,
+     9,
+     7
+    ]
+   },
+   "text": "ccw P3 P4 P1",
+   "step": 28,
+   "context": []
+  },
+  {
+   "pred": {
+    "kind": "ccw",
+    "args": [
+     4,
+     9,
+     10
+    ]
+   },
+   "text": "ccw P3 P4 P2",
+   "step": 29,
+   "context": []
+  },
+  {
+   "pred": {
+    "kind": "ccw",
+    "args": [
+     4,
+     9,
+     6
+    ]
+   },
+   "text": "ccw P3 P4 P5",
+   "step": 30,
+   "context": []
+  },
+  {
+   "pred": {
+    "kind": "ccw",
+    "args": [
+     9,
+     6,
+     1
+    ]
+   },
+   "text": "ccw P4 P5 P0",
+   "step": 31,
+   "context": []
+  },
+  {
+   "pred": {
+    "kind": "ccw",
+    "args": [
+     9,
+     6,
+     7
+    ]
+   },
+   "text": "ccw P4 P5 P1",
+   "step": 32,
+   "context": []
+  },
+  {
+   "pred": {
+    "kind": "ccw",
+    "args": [
+     9,
+     6,
+     10
+    ]
+   },
+   "text": "ccw P4 P5 P2",
+   "step": 33,
+   "context": []
+  },
+  {
+   "pred": {
+    "kind": "ccw",
+    "args": [
+     9,
+     6,
+     4
+    ]
+   },
+   "text": "ccw P4 P5 P3",
+   "step": 34,
+   "context": []
+  },
+  {
+   "pred": {
+    "kind": "ccw",
+    "args": [
+     6,
+     1,
+     7
+    ]
+   },
+   "text": "ccw P5 P0 P1",
+   "step": 35,
+   "context": []
+  },
+  {
+   "pred": {
+    "kind": "ccw",
+    "args": [
+     6,
+     1,
+     10
+    ]
+   },
+   "text": "ccw P5 P0 P2",
+   "step": 36,
+   "context": []
+  },
+  {
+   "pred": {
+    "kind": "ccw",
+    "args": [
+     6,
+     1,
+     4
+    ]
+   },
+   "text": "ccw P5 P0 P3",
+   "step": 37,
+   "context": []
+  },
+  {
+   "pred": {
+    "kind": "ccw",
+    "args": [
+     6,
+     1,
+     9
+    ]
+   },
+   "text": "ccw P5 P0 P4",
+   "step": 38,
+   "context": []
+  }
+ ],
+ "steps": [
+  {
+   "line": 5,
+   "text": "given O = (0, 0)",
+   "objects": [
+    0
+   ],
+   "notes": []
+  },
+  {
+   "line": 6,
+   "text": "given P0 = (1, 0)",
+   "objects": [
+    1
+   ],
+   "notes": []
+  },
+  {
+   "line": 8,
+   "text": "u = circle O P0",
+   "objects": [
+    2
+   ],
+   "notes": []
+  },
+  {
+   "line": 9,
+   "text": "x = line O P0",
+   "objects": [
+    3
+   ],
+   "notes": []
+  },
+  {
+   "line": 10,
+   "text": "P3 = meet x u except P0",
+   "objects": [
+    4
+   ],
+   "notes": [
+    "$P_0 P_3$ is a diameter of $u$."
+   ]
+  },
+  {
+   "line": 15,
+   "text": "c0 = circle P0 O",
+   "objects": [
+    5
+   ],
+   "notes": []
+  },
+  {
+   "line": 16,
+   "text": "P5, P1 = meet c0 u",
+   "objects": [
+    6,
+    7
+   ],
+   "notes": []
+  },
+  {
+   "line": 17,
+   "text": "c3 = circle P3 O",
+   "objects": [
+    8
+   ],
+   "notes": []
+  },
+  {
+   "line": 18,
+   "text": "P4, P2 = meet c3 u",
+   "objects": [
+    9,
+    10
+   ],
+   "notes": [
+    "The circles about $P_0$ and $P_3$ with the radius $|O P_0|$ meet $u$ in the remaining four vertices."
+   ]
+  },
+  {
+   "line": 25,
+   "text": "assert dist P0 P1 == dist O P0",
+   "objects": [],
+   "notes": []
+  },
+  {
+   "line": 26,
+   "text": "assert dist P1 P2 == dist O P0",
+   "objects": [],
+   "notes": []
+  },
+  {
+   "line": 27,
+   "text": "assert dist P2 P3 == dist O P0",
+   "objects": [],
+   "notes": []
+  },
+  {
+   "line": 28,
+   "text": "assert dist P3 P4 == dist O P0",
+   "objects": [],
+   "notes": []
+  },
+  {
+   "line": 29,
+   "text": "assert dist P4 P5 == dist O P0",
+   "objects": [],
+   "notes": []
+  },
+  {
+   "line": 30,
+   "text": "assert dist P5 P0 == dist O P0",
+   "objects": [],
+   "notes": [
+    "Every side equals the radius."
+   ]
+  },
+  {
+   "line": 35,
+   "text": "assert ccw P0 P1 P2",
+   "objects": [],
+   "notes": []
+  },
+  {
+   "line": 36,
+   "text": "assert ccw P0 P1 P3",
+   "objects": [],
+   "notes": []
+  },
+  {
+   "line": 37,
+   "text": "assert ccw P0 P1 P4",
+   "objects": [],
+   "notes": []
+  },
+  {
+   "line": 38,
+   "text": "assert ccw P0 P1 P5",
+   "objects": [],
+   "notes": []
+  },
+  {
+   "line": 39,
+   "text": "assert ccw P1 P2 P0",
+   "objects": [],
+   "notes": []
+  },
+  {
+   "line": 40,
+   "text": "assert ccw P1 P2 P3",
+   "objects": [],
+   "notes": []
+  },
+  {
+   "line": 41,
+   "text": "assert ccw P1 P2 P4",
+   "objects": [],
+   "notes": []
+  },
+  {
+   "line": 42,
+   "text": "assert ccw P1 P2 P5",
+   "objects": [],
+   "notes": []
+  },
+  {
+   "line": 43,
+   "text": "assert ccw P2 P3 P0",
+   "objects": [],
+   "notes": []
+  },
+  {
+   "line": 44,
+   "text": "assert ccw P2 P3 P1",
+   "objects": [],
+   "notes": []
+  },
+  {
+   "line": 45,
+   "text": "assert ccw P2 P3 P4",
+   "objects": [],
+   "notes": []
+  },
+  {
+   "line": 46,
+   "text": "assert ccw P2 P3 P5",
+   "objects": [],
+   "notes": []
+  },
+  {
+   "line": 47,
+   "text": "assert ccw P3 P4 P0",
+   "objects": [],
+   "notes": []
+  },
+  {
+   "line": 48,
+   "text": "assert ccw P3 P4 P1",
+   "objects": [],
+   "notes": []
+  },
+  {
+   "line": 49,
+   "text": "assert ccw P3 P4 P2",
+   "objects": [],
+   "notes": []
+  },
+  {
+   "line": 50,
+   "text": "assert ccw P3 P4 P5",
+   "objects": [],
+   "notes": []
+  },
+  {
+   "line": 51,
+   "text": "assert ccw P4 P5 P0",
+   "objects": [],
+   "notes": []
+  },
+  {
+   "line": 52,
+   "text": "assert ccw P4 P5 P1",
+   "objects": [],
+   "notes": []
+  },
+  {
+   "line": 53,
+   "text": "assert ccw P4 P5 P2",
+   "objects": [],
+   "notes": []
+  },
+  {
+   "line": 54,
+   "text": "assert ccw P4 P5 P3",
+   "objects": [],
+   "notes": []
+  },
+  {
+   "line": 55,
+   "text": "assert ccw P5 P0 P1",
+   "objects": [],
+   "notes": []
+  },
+  {
+   "line": 56,
+   "text": "assert ccw P5 P0 P2",
+   "objects": [],
+   "notes": []
+  },
+  {
+   "line": 57,
+   "text": "assert ccw P5 P0 P3",
+   "objects": [],
+   "notes": []
+  },
+  {
+   "line": 58,
+   "text": "assert ccw P5 P0 P4",
+   "objects": [],
+   "notes": [
+    "For every side, the other vertices lie to its left, so the hexagon is convex, and therefore regular."
+   ]
+  }
+ ]
+}

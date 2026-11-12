@@ -1,0 +1,62 @@
+[
+ {
+  "path": "circumcentre/circumcentre.sc",
+  "title": "The circumcentre of a triangle"
+ },
+ {
+  "path": "euclid-i-1/euclid-i-1.sc",
+  "title": "Euclid I.1: an equilateral triangle on a given segment"
+ },
+ {
+  "path": "euler-line/euler-line.sc",
+  "title": "The Euler line"
+ },
+ {
+  "path": "heptadecagon/heptadecagon.sc",
+  "title": "The regular 17-gon by Carlyle circles"
+ },
+ {
+  "path": "line-and-circle/line-and-circle.sc",
+  "title": "A line and a circle"
+ },
+ {
+  "path": "napoleon/napoleon.sc",
+  "title": "Napoleon's theorem"
+ },
+ {
+  "path": "nine-point-circle/nine-point-circle.sc",
+  "title": "The nine-point circle"
+ },
+ {
+  "path": "regular-15-gon/regular-15-gon.sc",
+  "title": "The regular 15-gon (Euclid IV.16)"
+ },
+ {
+  "path": "regular-hexagon/regular-hexagon.sc",
+  "title": "The regular hexagon (Euclid IV.15)"
+ },
+ {
+  "path": "regular-pentagon/regular-pentagon.sc",
+  "title": "The regular pentagon by a Carlyle circle"
+ },
+ {
+  "path": "square-on-segment/square-on-segment.sc",
+  "title": "A square on a given segment (Euclid I.46)"
+ },
+ {
+  "path": "tangents-from-a-point/tangents-from-a-point.sc",
+  "title": "Tangents from a point"
+ },
+ {
+  "path": "thales/thales.sc",
+  "title": "Thales' theorem"
+ },
+ {
+  "path": "three-points/three-points.sc",
+  "title": "Three points and a circle"
+ },
+ {
+  "path": "two-circles/two-circles.sc",
+  "title": "Two circles of equal radius"
+ }
+]

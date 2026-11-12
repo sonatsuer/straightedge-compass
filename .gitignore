@@ -1,3 +1,13 @@
-.stack-work/
-straightedge-compass.cabal
+# PureScript / web
+node_modules/
+output/
+.spago/
+.psci_modules/
+.spec-results
+dist/
+
+# Lean
+.lake/
+
+# Editors
 *~

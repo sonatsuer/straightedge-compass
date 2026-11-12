@@ -1,0 +1,31 @@
+name = "StraightedgeCompass"
+version = "0.1.0"
+keywords = ["math"]
+defaultTargets = ["StraightedgeCompass", "examples", "leanTests"]
+
+[leanOptions]
+pp.unicode.fun = true # pretty-prints `fun a ↦ b`
+relaxedAutoImplicit = false
+weak.linter.mathlibStandardSet = true
+weak.linter.style.header = false # the project is BSD-3, not Apache 2.0
+maxSynthPendingDepth = 3
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "v4.35.0"
+
+[[lean_lib]]
+name = "StraightedgeCompass"
+
+# The example proofs (examples/<name>/*.lean), elaborated from the web
+# tool's core exports next to them.
+[[lean_lib]]
+name = "examples"
+globs = ["examples.+"]
+
+# Tests of features no example uses (test/lean/<name>/*.lean), from the core
+# exports next to them.
+[[lean_lib]]
+name = "leanTests"
+globs = ["test.lean.+"]

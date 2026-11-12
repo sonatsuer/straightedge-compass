@@ -1,0 +1,52 @@
+package:
+  name: straightedge-compass
+  dependencies:
+    - aff
+    - argonaut-core
+    - arrays
+    - console
+    - control
+    - datetime
+    - effect
+    - either
+    - foldable-traversable
+    - foreign-object
+    - halogen
+    - halogen-subscriptions
+    - integers
+    - maybe
+    - nullable
+    - numbers
+    - ordered-collections
+    - parsing
+    - partial
+    - prelude
+    - quickcheck
+    - spec-quickcheck
+    - strings
+    - transformers
+    - tuples
+    - unicode
+    - unsafe-reference
+    - web-dom
+    - web-events
+    - web-html
+    - web-uievents
+  test:
+    main: Test.Main
+    dependencies:
+      - aff
+      - argonaut-core
+      - arrays
+      - control
+      - foreign-object
+      - node-buffer
+      - node-fs
+      - quickcheck
+      - spec
+      - spec-node
+      - spec-quickcheck
+workspace:
+  packageSet:
+    registry: 81.11.4
+  extraPackages: {}

@@ -1,0 +1,1 @@
+import"./chunk-VC46IEJQ.js";var d,t,a=!1;function o(){return a?d:void 0}function u(n,r){let e=d||n();return t!==void 0?t:t=(async()=>(a=!0,await e.init(r),d=e))()}function c(n,r,e,l){let i=o();if(i){e(i);return}u(n,r).then(e).catch(l)}export{u as createGlobalRenderer,o as getGlobalRenderer,c as withGlobalRenderer};
